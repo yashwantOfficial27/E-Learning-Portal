@@ -3,32 +3,55 @@ import useVideos from "../hooks/useVideos";
 import Course from "./Course";
 import youtube from "../apis/youtube";
 
-const CourseList = ({ type }) => {
+const CourseList = ({ videos }) => {
   //   const [videos, search] = useVideos(type);
-  const [videos, setVideos] = useState([]);
+  //   const [videos, setVideos] = useState([]);
 
-  useEffect(() => {
-    const onSearchSubmit = async (term) => {
-      console.log(type);
-      const { data } = await youtube.get("/search", {
-        params: {
-          q: "data Structure",
-        },
-      });
-      //   console.log("hello");
-      //   //   setSelectedVideo(data.items[0]);
-      //   setVideos(data.items);
-    };
-    onSearchSubmit(type);
-    console.log(type);
-  }, [videos]);
+  //   useEffect(() => {
+  //     const onSearchSubmit = async (term) => {
+  //       console.log(type);
+  //       const { data } = await youtube.get("/search", {
+  //         params: {
+  //           q: term,
+  //         },
+  //       });
+  //       //   console.log(data);
+  //       //   //   setSelectedVideo(data.items[0]);
+  //       setVideos(data.items);
+  //     };
+  //     onSearchSubmit(type);
+  //     // console.log(type);
+  //   }, []);
 
   //   console.log(videos);
-  const renderedCourse = {};
+  //   key={video.id.videoId}
+  const renderedCourse = Object.keys(videos).map((key, i) => {
+    if (i != 4 && i != 5) {
+      return <Course key={key} video={videos[i]} />;
+    }
+  });
+  //     return <Course video={video} />;
+  //   });
+
+  {
+    /* <div>
+      {Object.keys(sampleJSON).map((key, i) => (
+        <p key={i}>
+          <span>Key Name: {key}</span>
+          <span>Value: {sampleJSON[key]}</span>
+        </p>
+      ))}
+    </div> */
+  }
+
+  // for (var key in json) {
+  //   json.forEach((obj) => { console.log(obj.id); });
 
   return (
     <div>
-      <Course />
+      {/* {console.log(videos[0].id.videoId)} */}
+      {/* )} */}
+      {renderedCourse}
     </div>
   );
 };
