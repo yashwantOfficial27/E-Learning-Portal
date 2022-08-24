@@ -1,6 +1,7 @@
 import React from "react";
 import CourseContainer from "./components/CourseContainer";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const courseCategory = [
   { id: 0, value: "Back-End" },
@@ -19,6 +20,7 @@ function App() {
         {/* <CourseContainer categeory={courseCategory} /> */}
         {renderedCourseContainer}
       </div>
+      <Footer />
     </div>
   );
 }
