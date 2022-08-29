@@ -48,7 +48,7 @@ export default function Footer() {
                 </ul>
               </div>
               <div class="col-md-6 item text">
-                <h3>Company Name</h3>
+                <h3>VirenWant</h3>
                 <p>
                   Praesent sed lobortis mi. Suspendisse vel placerat ligula.
                   Vivamus ac sem lacus. Ut vehicula rhoncus elementum. Etiam
@@ -75,7 +75,7 @@ export default function Footer() {
                 </a>
               </div>
             </div>
-            <p class="copyright">Company Name © 2018</p>
+            <p class="copyright">VirenWant © 2022 -</p>
           </div>
         </footer>
       </div>

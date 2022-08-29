@@ -2,6 +2,7 @@ import React from "react";
 import CourseContainer from "./components/CourseContainer";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import About from "./components/About";
 
 const courseCategory = [
   { id: 0, value: "Back-End" },
@@ -16,11 +17,12 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="container">
+      {/* <div className="container"> */}
         {/* <CourseContainer categeory={courseCategory} /> */}
-        {renderedCourseContainer}
-      </div>
-      <Footer />
+        {/* {renderedCourseContainer} */}
+        <About />
+      {/* </div> */}
+      {/* <Footer /> */}
     </div>
   );
 }
