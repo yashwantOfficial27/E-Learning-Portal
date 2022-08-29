@@ -1,8 +1,5 @@
 import React from "react";
 import CourseContainer from "./components/CourseContainer";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import About from "./components/About";
 import {Routes, Route} from 'react-router-dom';
 import Link from './components/Link';
 import Contact from './components/Contact';
@@ -20,6 +17,7 @@ const renderedCourseContainer = courseCategory.map((cat) => {
 function App() {
   return (
     <div>
+
       {/* <Navbar /> */}
       {/* <Routes>
   <Route path="/" element={<Dashboard />}>
